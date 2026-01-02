@@ -1,0 +1,40 @@
+{
+  "name": "@ephemushroom/eslint-config-style",
+  "version": "1.0.0",
+  "description": "ESLint style configuration for Ephemushroom organization",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "style",
+    "stylistic",
+    "configuration",
+    "code-style",
+    "formatting"
+  ],
+  "author": "Ephemushroom Organization",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ephemushroom/eslint-config-style"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "eslint.config.js"
+  ],
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint test-eslint.js --fix"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "@stylistic/eslint-plugin": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
+  }
+}
