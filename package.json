@@ -1,6 +1,6 @@
 {
   "name": "@ephemushroom/eslint-config-style",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint style configuration for Ephemushroom organization",
   "keywords": [
     "eslint",
@@ -35,9 +35,9 @@
     "lint:fix": "eslint test-eslint.js --fix"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^1.0.0",
+    "@stylistic/eslint-plugin": "^1.0.1",
     "@types/node": "^25.0.3",
-    "eslint": "^8.0.0",
+    "eslint": "^9.39.2",
     "typescript": "^5.9.3"
   }
 }

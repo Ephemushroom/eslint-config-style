@@ -23,31 +23,43 @@ bun add -D @ephemushroom/eslint-config-style @stylistic/eslint-plugin eslint
 
 ### For ESLint Flat Configuration (ESLint 9+)
 
-#### Option 1: Using the default export (Recommended)
+#### Option 1: JavaScript/TypeScript config file
 ```js
-import config from '@ephemushroom/eslint-config-style';
+import styleConfig from '@ephemushroom/eslint-config-style'
 
 export default [
-  config,
-];
+  styleConfig,
+  // Your other configs
+]
 ```
 
-#### Option 2: Using the flat export
+#### Option 2: With defineConfig (provides better type hints)
 ```js
-import config from '@ephemushroom/eslint-config-style/flat';
+import { defineConfig } from 'eslint/config'
+import styleConfig from '@ephemushroom/eslint-config-style'
+
+export default defineConfig([
+  styleConfig,
+  // Your other configs
+])
+```
+
+#### Option 3: Using the flat export
+```js
+import styleConfig from '@ephemushroom/eslint-config-style/flat'
 
 export default [
-  config,
-];
+  styleConfig,
+]
 ```
 
-#### Option 3: Using the TypeScript config directly
+#### Option 4: Using the TypeScript config directly
 ```ts
-import config from '@ephemushroom/eslint-config-style/eslint.config.ts';
+import styleConfig from '@ephemushroom/eslint-config-style/eslint.config.ts'
 
 export default [
-  config,
-];
+  styleConfig,
+]
 ```
 
 ## Modern Features
