@@ -1,6 +1,6 @@
 import stylistic from '@stylistic/eslint-plugin'
+import type { Linter } from 'eslint'
 
-/** @type {import('eslint').Linter.FlatConfig} */
 export default {
   plugins: {
     '@stylistic': stylistic,
@@ -26,4 +26,4 @@ export default {
     '@stylistic/object-curly-newline': ['error', { multiline: true, minProperties: 4 }],
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
   },
-}
+} satisfies Linter.Config
