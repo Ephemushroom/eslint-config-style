@@ -1,18 +1,10 @@
-// ESLint style configuration for Ephemushroom organization
-// Supports both traditional and flat config formats
+import stylistic from '@stylistic/eslint-plugin'
 
-// Traditional config format
-const traditionalConfig = {
-  // Define the parser options
-  parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: 'module',
+/** @type {import('eslint').Linter.FlatConfig} */
+export default {
+  plugins: {
+    '@stylistic': stylistic,
   },
-
-  // Define the plugin for stylistic rules
-  plugins: ['@stylistic'],
-
-  // Define the stylistic rules
   rules: {
     '@stylistic/semi': ['error',
       'never',
@@ -34,7 +26,4 @@ const traditionalConfig = {
     '@stylistic/object-curly-newline': ['error', { multiline: true, minProperties: 4 }],
     '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
   },
-};
-
-// Export for traditional configs
-module.exports = traditionalConfig;
+}
